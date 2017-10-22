@@ -1,0 +1,10 @@
+{% if roles_list %}
+    <ul>
+    {% for a  in roles_list %}
+	<li><a href="{% url 'firstapp:details' a.first_name %}"> {{ a.last_name }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No Employees available </p>
+{% endif %}
+ 
